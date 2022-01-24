@@ -27,6 +27,7 @@ export default {
       await store.dispatch("getCountries");
       await store.dispatch("filterRegion", "");
     });
+
     return { countries };
   },
 };

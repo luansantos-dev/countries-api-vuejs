@@ -15,15 +15,10 @@ export default createStore({
     },
   },
   actions: {
-    getCountries(context) {
-      try {
-        axios.get('https://restcountries.com/v3.1/all').then((response) => {
-          context.commit('SET_COUNTRIES', response.data);
-          console.log(response.data);
-        });
-      } catch (error) {
-        return error;
-      }
+    async getCountries(context) {
+      await axios.get('https://restcountries.com/v3.1/all').then((response) => {
+        context.commit('SET_COUNTRIES', response.data);
+      });
     },
 
     filterRegion({ commit, state }, region) {
