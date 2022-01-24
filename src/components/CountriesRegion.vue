@@ -28,9 +28,9 @@ export default {
 <style scoped>
 .region {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 2rem;
-
+  margin-bottom: 1rem;
   gap: 0.6rem;
 }
 </style>
